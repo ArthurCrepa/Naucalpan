@@ -37,10 +37,18 @@ def square(start, end):
 
 
 def circle(start, end):
-    """Draw circle from start to end."""
-    pass  # TODO
+    "Draw circle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    radius = ((end.x - start.x)**2 + (end.y - start.y)**2)**0.5 / 2
+    goto(start.x + radius, start.y)
+    turtle_circle(radius)
 
+    end_fill()
+    
 def rectangle(start, end):
     """Draw rectangle from start to end."""
     pass  # TODO
@@ -79,6 +87,8 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color ('purple'),'P')
+
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
