@@ -28,10 +28,11 @@ def circle_shape(start, end):
     down()
     begin_fill()
     
-    # Calcula el radio basándose en la distancia entre start y end
-    radius = ((end.x - start.x)**2 + (end.y - start.y)**2) ** 0.5
-    turtle_circle(radius)
-
+    t = turtle.Turtle()
+  
+  
+r = 50
+t.circle(r)
     end_fill()
 
 def rectangle(start, end):
