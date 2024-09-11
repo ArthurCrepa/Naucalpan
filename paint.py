@@ -23,18 +23,11 @@ def square(start, end):
 
 def circle_shape(start, end):
     "Draw circle from start to end."
-    up()
-    goto(start.x, start.y)
-    down()
+    fillcolor('purple')
+    goto(10,0)
     begin_fill()
-    
-    t = turtle.Turtle()
-  
-  
-r = 50
-t.circle(r)
+    circle(50)
     end_fill()
-
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
