@@ -4,9 +4,7 @@ Exercises
 
 1. Add a color.
 2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
-5. Add width parameter.
+
 """
 
 from turtle import *
@@ -37,15 +35,15 @@ def square(start, end):
 
 
 def circle(start, end):
-    "Draw circle from start to end."
+    """Draw circle from start to end."""
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
 
     radius = ((end.x - start.x)**2 + (end.y - start.y)**2)**0.5 / 2
-    goto(start.x + radius, start.y)
-    turtle_circle(radius)
+    setheading(0)  # Asegura que el círculo se dibuje correctamente desde la posición actual
+    circle(radius)
 
     end_fill()
     
@@ -87,7 +85,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color ('purple'),'P')
+onkey(lambda: color('purple'), 'P')
 
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
@@ -95,3 +93,4 @@ onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
