@@ -23,11 +23,16 @@ def square(start, end):
 
 def circle_shape(start, end):
     "Draw circle from start to end."
-    fillcolor('purple')
-    goto(10,0)
+    up()  
+    radius = (end.x - start.x)/2
+    goto(start.x, start.y)
+
+    down()
     begin_fill()
-    circle(50)
+    
+    circle(radius)
     end_fill()
+
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
