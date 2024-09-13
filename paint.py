@@ -92,7 +92,7 @@ onkey(lambda: color('red'), 'R')
 onkey(lambda: color('yellow'), 'Y')  # Nuevo color
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle_shape), 'c')  # Cambiado a circle_shape
+onkey(lambda: store('shape', circle_shape), 'c')  # Cambiado a circle_shape
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
